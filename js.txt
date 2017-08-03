@@ -1,0 +1,38 @@
+@keyframes
+
+querySelector
+
+stringObject.replace(regexp/substr,replacement)
+
+.sr-3_ul{
+	opacity: 1;
+	-webkit-animation:bounce 1s ease-in;
+	position: relative;
+}
+
+@-webkit-keyframes bounce{
+	0%{top:100px;}
+	50%{top: -40px;}
+	75%{top: 0px;}
+	85%{top: -20px;}
+	100%{top: 0px;}
+}
+
+
+-----------------闭包
+function headerNavTip(){
+  var j=i;
+  navItems[j].onmouseover=function(){
+    navTip.style.left=(i*115)+'px';
+    switchNavItemsActive(j);
+  }
+}
+
+for(var i=0;i<navItems.length;i++){
+  headerNavTip(i);
+}
+----------------------------------
+setInterval()
+--------------------------------
+.style.display='none/block'...仅限于显示不显示
+.delCls();  .addCls(); CSS不同
