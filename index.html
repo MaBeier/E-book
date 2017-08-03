@@ -298,7 +298,7 @@
 			 </div>
 		</div>
 	</div>
-<script src="js/zepto.min.js"></script>
+<script src="js/zepto.js"></script>
 <script>
 			window.jQuery = $;
 </script>
@@ -542,6 +542,9 @@
 				}
 			});
 
+
+
+//字体大小
 			$('#large-font').click(function(){
 				if(initFontSize>20){
 					return;
@@ -559,7 +562,10 @@
 				Util.StorageSetter('font_size',initFontSize);
 			});
 
-			
+
+
+
+//背景色			
 			$('.bk-container-1').click(function(){
 				Dom.body.removeClass();
 				Dom.body.addClass('bk-container-1');
@@ -586,7 +592,7 @@
 
 
 						
-
+//滚动条
 			Win.scroll(function(){
 				Dom.bottom_nav.hide();
 				Dom.top_nav.hide();
@@ -594,6 +600,9 @@
 				Dom.font_container.removeClass('current');
 			});
 
+
+
+//夜间
 			$('#night-button').click(function(){
 				if(Dom.day_icon.css('display')=='none'){
 					Dom.day_icon.css('display','block');
@@ -606,6 +615,7 @@
 					$('body').css('background','#e9daaa');
 					Dom.night_icon.css('display','block');}
 			});
+//上一页
 
 			$('#prev_button').click(function(){
 				readerModel.prevChapter(function(data){
@@ -614,6 +624,7 @@
 				$("html, body").scrollTop(0+"px");
 			});
 
+//下一页
 			$('#next_button').click(function(){
 				readerModel.nextChapter(function(data){
 					readerUI(data);
